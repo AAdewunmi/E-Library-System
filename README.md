@@ -25,7 +25,10 @@ This project aims to develop an electronic library application.
 ## What is the MVP?
 
 The minimum viable product is an application that renders in web browsers 
-that can allow users to log in, borrow books, return books and log out.
+that can allow two types of users to perform different operations:
+
+1. Admin: Log in, register books, remove books and log out.
+2. Student: Log in, borrow books, return books and log out.
 
 ## What are the sprinkles (Nice to haves)?
 
