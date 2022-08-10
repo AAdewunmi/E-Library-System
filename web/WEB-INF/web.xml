@@ -8,6 +8,10 @@
         <servlet-name>LogoutAdmin</servlet-name>
         <servlet-class>servlets.LogoutAdmin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddLibrarianForm</servlet-name>
+        <servlet-class>servlets.AddLibrarianForm</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>LogoutAdmin</servlet-name>
         <url-pattern>/LogoutAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddLibrarianForm</servlet-name>
+        <url-pattern>/AddLibrarianForm</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
