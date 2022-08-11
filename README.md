@@ -1,8 +1,12 @@
-# Project Title: E Library System
+# Project Title: E Library System (WORK-IN-PROGRESS)
 
 ## What is the project?
 
 This project aims to develop an electronic library application.
+
+- Landing Page Screenshot
+
+![Image description](web/images/landingpage.png)
 
 ## Tech Stack:
 
