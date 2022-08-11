@@ -61,11 +61,11 @@ public class AdminLogin extends HttpServlet {
 			request.getRequestDispatcher("navhome.html").include(request, response);
 			out.println("<div class='container'>");
 			out.println("<h3>Username or password error!</h3>");
-			request.getRequestDispatcher("adminloginform.html").include(request, response);
+                        request.getRequestDispatcher("adminloginform.html").include(request, response);
 			out.println("</div>");
+                        
+                       
 		}
-		
-		
 		request.getRequestDispatcher("footer.html").include(request, response);
 		out.close();
     }
