@@ -12,6 +12,10 @@
         <servlet-name>AddLibrarianForm</servlet-name>
         <servlet-class>servlets.AddLibrarianForm</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewLibrarian</servlet-name>
+        <servlet-class>servlets.ViewLibrarian</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>AddLibrarianForm</servlet-name>
         <url-pattern>/AddLibrarianForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewLibrarian</servlet-name>
+        <url-pattern>/ViewLibrarian</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
