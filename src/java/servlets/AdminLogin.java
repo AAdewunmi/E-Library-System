@@ -60,7 +60,7 @@ public class AdminLogin extends HttpServlet {
 		}else{
 			request.getRequestDispatcher("navhome.html").include(request, response);
 			out.println("<div class='container'>");
-			out.println("<h3>Username or password error</h3>");
+			out.println("<h3>Username or password error!</h3>");
 			request.getRequestDispatcher("adminloginform.html").include(request, response);
 			out.println("</div>");
 		}
