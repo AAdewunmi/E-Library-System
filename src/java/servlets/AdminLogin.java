@@ -39,6 +39,9 @@ public class AdminLogin extends HttpServlet {
 		out.println("<head>");
 		out.println("<title>Admin Section</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
+                out.println("<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css/'>");
+                out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js/'></script>");
+                out.println("<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js/'></script>");
 		out.println("</head>");
 		out.println("<body>");
                 
