@@ -18,6 +18,8 @@ This project aims to develop an electronic library application.
 
 - Java Servlet
 
+- Java Beans
+
 - JDBC Driver
 
 - MySQL DB / MySQL Server / MySQL Workbench
