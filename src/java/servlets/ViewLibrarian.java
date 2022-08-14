@@ -14,8 +14,8 @@ import jakarta.servlet.annotation.WebServlet;
  *
  * @author adrianadewunmi
  */
-//import beans.LibrarianBean;
-//import dao.LibrarianDao;
+import beans.LibrarianBean;
+import dao.LibrarianDao;
 
 @WebServlet("/servlets.ViewLibrarian")
 
