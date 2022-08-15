@@ -1,5 +1,5 @@
 
-CREATE DATABASE elibrary_DB;
+CREATE DATABASE ElibraryDB;
 
 CREATE TABLE E_BOOK (
     CALLNO varchar(4000),
