@@ -5,19 +5,26 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  *
  * @author adrianadewunmi
  */
 public class DB {
-    public static Connection getCon(){
+    public static Connection getCon() throws ClassNotFoundException, SQLException{
         
-        Connection connection = null;
+        
+        Connection connection;
+        
         String userName = "root";
         String userPassword = "abc";
         
-        Class.forName("");
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ELibraryDB", userName, userPassword);
+        
+        return connection;
     
     }
 }
