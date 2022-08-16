@@ -96,4 +96,18 @@ public class LibrarianDao {
 		return bean;
     }
     
+    public static int delete(int id){
+		int status=0;
+		try{
+			Connection con=DB.getCon();
+			PreparedStatement ps=con.prepareStatement("delete from e_librarian where id=?");
+			ps.setInt(1,id);
+			status=ps.executeUpdate();
+			con.close();
+			
+		}catch(Exception e){System.out.println(e);}
+		
+		return status;
+    }
+    
 }
