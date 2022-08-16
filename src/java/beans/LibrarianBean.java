@@ -14,6 +14,9 @@ public class LibrarianBean {
     private String librarianName, librarianEmail, librarianPassword;
     private long librarianMobileNumber;
 
+    public LibrarianBean() {
+    }
+
     public LibrarianBean(int librarianID, String librarianName, String librarianEmail, String librarianPassword, long librarianMobileNumber) {
         this.librarianID = librarianID;
         this.librarianName = librarianName;

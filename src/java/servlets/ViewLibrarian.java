@@ -54,7 +54,7 @@ public class ViewLibrarian extends HttpServlet {
         out.println("<table class='table table-bordered table-striped'>");
         out.println("<tr><th>Id</th><th>Name</th><th>Email</th><th>Password</th><th>Mobile</th><th>Edit</th><th>Delete</th></tr>");
         for(LibrarianBean bean:list){
-                out.println("<tr><td>"+bean.getId()+"</td><td>"+bean.getName()+"</td><td>"+bean.getEmail()+"</td><td>"+bean.getPassword()+"</td><td>"+bean.getMobile()+"</td><td><a href='servlets.EditLibrarianForm?id="+bean.getId()+"'>Edit</a></td><td><a href='servlets.DeleteLibrarian?id="+bean.getId()+"'>Delete</a></td></tr>");
+                out.println("<tr><td>"+bean.getLibrarianID()+"</td><td>"+bean.getLibrarianName()+"</td><td>"+bean.getLibrarianEmail()+"</td><td>"+bean.getLibrarianPassword()+"</td><td>"+bean.getLibrarianMobileNumber()+"</td><td><a href='servlets.EditLibrarianForm?id="+bean.getLibrarianID()+"'>Edit</a></td><td><a href='servlets.DeleteLibrarian?id="+bean.getLibrarianID()+"'>Delete</a></td></tr>");
         }
         out.println("</table>");
 
