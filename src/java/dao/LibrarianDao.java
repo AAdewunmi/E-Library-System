@@ -31,6 +31,26 @@ public class LibrarianDao {
 		}catch(Exception e){System.out.println(e);}
 		
 		return status;
-	}
+    }
+    
+    public static int update(LibrarianBean bean){
+		int status=0;
+		try{
+			Connection con=DB.getCon();
+			PreparedStatement ps=con.prepareStatement("update e_librarian set name=?,email=?,password=?,mobile=? where id=?");
+			ps.setString(1,bean.getLibrarianName());
+			ps.setString(2,bean.getLibrarianEmail());
+			ps.setString(3,bean.getLibrarianPassword());
+			ps.setLong(4,bean.getLibrarianMobileNumber());
+			ps.setInt(5,bean.getLibrarianID());
+			status=ps.executeUpdate();
+			con.close();
+			
+		}catch(Exception e){System.out.println(e);}
+		
+		return status;
+    }
+    
+    
     
 }
