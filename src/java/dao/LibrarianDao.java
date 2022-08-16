@@ -73,6 +73,27 @@ public class LibrarianDao {
 		}catch(Exception e){System.out.println(e);}
 		
 		return list;
-	}
+    }
+    
+    public static LibrarianBean viewById(int id){
+		LibrarianBean bean=new LibrarianBean();
+		try{
+			Connection con=DB.getCon();
+			PreparedStatement ps=con.prepareStatement("select * from e_librarian where id=?");
+			ps.setInt(1,id);
+			ResultSet rs=ps.executeQuery();
+			if(rs.next()){
+				bean.setLibrarianID(rs.getInt(1));
+				bean.setLibrarianName(rs.getString(2));
+				bean.setLibrarianPassword(rs.getString(3));
+				bean.setLibrarianEmail(rs.getString(4));
+				bean.setLibrarianMobileNumber(rs.getLong(5));
+			}
+			con.close();
+			
+		}catch(Exception e){System.out.println(e);}
+		
+		return bean;
+    }
     
 }
