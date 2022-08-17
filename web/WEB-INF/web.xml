@@ -16,6 +16,10 @@
         <servlet-name>ViewLibrarian</servlet-name>
         <servlet-class>servlets.ViewLibrarian</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LibrarianBean</servlet-name>
+        <servlet-class>beans.LibrarianBean</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>ViewLibrarian</servlet-name>
         <url-pattern>/ViewLibrarian</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LibrarianBean</servlet-name>
+        <url-pattern>/LibrarianBean</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
