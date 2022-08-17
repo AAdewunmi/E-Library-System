@@ -4,82 +4,77 @@
  */
 package beans;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.sql.Date;
 
 /**
  *
  * @author adrianadewunmi
  */
-public class IssueBookBean extends HttpServlet {
+public class IssueBookBean {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet IssueBookBean</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet IssueBookBean at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+    private String callno, studentid, studentname;
+    private long studentmobile;
+    private Date issuedate;
+    private String returnstatus;
+
+    public IssueBookBean() {
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+    public IssueBookBean(String callno, String studentid, String studentname, long studentmobile) {
+        this.callno = callno;
+        this.studentid = studentid;
+        this.studentname = studentname;
+        this.studentmobile = studentmobile;
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+    public String getCallno() {
+        return callno;
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+    public void setCallno(String callno) {
+        this.callno = callno;
+    }
 
+    public String getStudentid() {
+        return studentid;
+    }
+
+    public void setStudentid(String studentid) {
+        this.studentid = studentid;
+    }
+
+    public String getStudentname() {
+        return studentname;
+    }
+
+    public void setStudentname(String studentname) {
+        this.studentname = studentname;
+    }
+
+    public long getStudentmobile() {
+        return studentmobile;
+    }
+
+    public void setStudentmobile(long studentmobile) {
+        this.studentmobile = studentmobile;
+    }
+
+    public Date getIssuedate() {
+        return issuedate;
+    }
+
+    public void setIssuedate(Date issuedate) {
+        this.issuedate = issuedate;
+    }
+
+    public String getReturnstatus() {
+        return returnstatus;
+    }
+
+    public void setReturnstatus(String returnstatus) {
+        this.returnstatus = returnstatus;
+    }
+    
+    
+    
 }
