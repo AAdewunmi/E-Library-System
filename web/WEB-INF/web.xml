@@ -28,6 +28,10 @@
         <servlet-name>IssueBookBean</servlet-name>
         <servlet-class>beans.IssueBookBean</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddBook</servlet-name>
+        <servlet-class>servlets.AddBook</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>IssueBookBean</servlet-name>
         <url-pattern>/IssueBookBean</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddBook</servlet-name>
+        <url-pattern>/AddBook</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
