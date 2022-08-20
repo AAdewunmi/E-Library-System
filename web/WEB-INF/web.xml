@@ -36,6 +36,10 @@
         <servlet-name>AddBookForm</servlet-name>
         <servlet-class>servlets.AddBookForm</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddLibrarian</servlet-name>
+        <servlet-class>servlets.AddLibrarian</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>AddBookForm</servlet-name>
         <url-pattern>/AddBookForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddLibrarian</servlet-name>
+        <url-pattern>/AddLibrarian</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
