@@ -44,6 +44,10 @@
         <servlet-name>DeleteBook</servlet-name>
         <servlet-class>servlets.DeleteBook</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteLibrarian</servlet-name>
+        <servlet-class>servlets.DeleteLibrarian</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>DeleteBook</servlet-name>
         <url-pattern>/DeleteBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteLibrarian</servlet-name>
+        <url-pattern>/DeleteLibrarian</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
