@@ -78,4 +78,21 @@ public class BookDao {
         return status;
     }
     
+    public static int getIssued(String callno){
+        int issued = 0;
+        try{
+            Connection con = DB.getCon();
+            PreparedStatement ps = con.prepareStatement("select * from e_book where callno=?");
+            ps.setString(1, callno);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                issued = rs.getInt("issued");
+            }
+            con.close();
+        }catch(ClassNotFoundException | SQLException e){
+            System.out.println("GET ISSUED ERROR! " + e);
+        }
+        return issued;
+    }
+    
 }
