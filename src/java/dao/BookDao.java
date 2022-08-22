@@ -112,4 +112,37 @@ public class BookDao {
         return status;
     }
     
+    public static int issueBook(IssueBookBean bean){
+        String callno = bean.getCallno();
+        boolean checkstatus = checkIssue(callno);
+        System.out.println("Check Status: " + checkstatus);
+        if(checkstatus){
+            int status = 0;
+            try{
+                Connection con = DB.getCon();
+                PreparedStatement ps = con.prepareStatement("insert into e_issuebook values(?,?,?,?,?,?)");
+                ps.setString(1, bean.getCallno());
+                ps.setString(2, bean.getStudentid());
+                ps.setString(3, bean.getStudentname());
+                ps.setLong(4, bean.getStudentmobile());
+                java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
+                ps.setDate(5, currentDate);
+                ps.setString(6, "no");
+                status = ps.executeUpdate();
+                if(status > 0){
+                    PreparedStatement ps2 = con.prepareStatement("update e_book set issued=? where callno=?");
+                    ps2.setInt(1, getIssued(callno) + 1);
+                    ps2.setString(2, callno);
+                    status = ps2.executeUpdate();
+                }
+                con.close();
+            }catch(ClassNotFoundException | SQLException e){
+                System.out.println("ISSUE BOOK ERROR! " + e);
+            }
+            return status;
+        }else{
+            return 0;
+        }
+    }
+    
 }
