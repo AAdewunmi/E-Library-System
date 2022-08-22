@@ -64,4 +64,18 @@ public class BookDao {
         return list;
     }
     
+    public static int delete(String callno){
+        int status = 0;
+        try{
+            Connection con = DB.getCon();
+            PreparedStatement ps = con.prepareStatement("delete from e_book where callno=?");
+            ps.setString(1, callno);
+            status = ps.executeUpdate();
+            con.close();
+        }catch(ClassNotFoundException | SQLException e){
+            System.out.println("DELETE ERROR! " + e);
+        }
+        return status;
+    }
+    
 }
