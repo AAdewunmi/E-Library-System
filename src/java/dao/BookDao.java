@@ -12,7 +12,10 @@ package dao;
 import beans.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookDao {
     
@@ -35,6 +38,30 @@ public class BookDao {
         }
         
         return status;
+    }
+    
+    public static List<BookBean> view(){
+        List<BookBean> list = new ArrayList<BookBean>();
+        
+        try{
+            Connection con = DB.getCon();
+            PreparedStatement ps = con.prepareStatement("select * from e_book");
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                BookBean bean = new BookBean();
+                bean.setCallno(rs.getString("callno"));
+                bean.setName(rs.getString("name"));
+                bean.setAuthor(rs.getString("author"));
+                bean.setPublisher(rs.getString("publisher"));
+                bean.setQuantity(rs.getInt("quantity"));
+                bean.setIssued(rs.getInt("issued"));
+                list.add(bean);
+            }
+            con.close();
+        }catch(ClassNotFoundException | SQLException e){
+            System.out.println("VIEW ERROR! " +  e);
+        }
+        return list;
     }
     
 }
