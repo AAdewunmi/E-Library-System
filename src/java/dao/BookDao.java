@@ -95,4 +95,21 @@ public class BookDao {
         return issued;
     }
     
+    public static boolean checkIssue(String callno){
+        boolean status = false;
+        try{
+            Connection con = DB.getCon();
+            PreparedStatement ps = con.prepareStatement("select * from e_book where callno=? and quantity>issued");
+            ps.setString(1, callno);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                status = true;
+            }
+            con.close();
+        }catch(ClassNotFoundException | SQLException e){
+            System.out.println("CHECK ISSUE ERROR! " + e);
+        }
+        return status;
+    }
+    
 }
