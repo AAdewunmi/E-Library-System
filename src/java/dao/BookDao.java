@@ -168,4 +168,27 @@ public class BookDao {
         return status;
     }
     
+    public static List<IssueBookBean> viewIssuedBook(){
+        List<IssueBookBean> list = new ArrayList<IssueBookBean>();
+        try{
+            Connection con = DB.getCon();
+            PreparedStatement ps = con.prepareStatement("select * from e_issuebook order by issueddate desc");
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                IssueBookBean bean = new IssueBookBean();
+                bean.setCallno(rs.getString("callno"));
+                bean.setStudentid(rs.getString("studentid"));
+                bean.setStudentname(rs.getString("studentname"));
+                bean.setStudentmobile(rs.getLong("studentmobile"));
+                bean.setIssuedate(rs.getDate("issueddate"));
+                bean.setReturnstatus(rs.getString("returnstatus"));
+                list.add(bean);
+            }
+            con.close();
+        }catch(ClassNotFoundException | SQLException e){
+            System.out.println("VIEW ISSUED BOOK! " + e);
+        }
+        return list;
+    }
+    
 }
