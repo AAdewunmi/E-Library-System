@@ -163,7 +163,7 @@ public class BookDao {
             }
             con.close();
         }catch(ClassNotFoundException | SQLException e){
-            System.out.println("RETURN BOOK! " + e);
+            System.out.println("RETURN BOOK ERROR! " + e);
         }
         return status;
     }
@@ -186,9 +186,27 @@ public class BookDao {
             }
             con.close();
         }catch(ClassNotFoundException | SQLException e){
-            System.out.println("VIEW ISSUED BOOK! " + e);
+            System.out.println("VIEW ISSUED BOOK ERROR! " + e);
         }
         return list;
+    }
+    
+    public static int updateLibrarian(LibrarianBean bean){
+        int status = 0;
+        try{
+            Connection con = DB.getCon();
+            PreparedStatement ps = con.prepareStatement("update e_librarian set name=?,email=?,password=?,mobile=? where id=?");
+            ps.setString(1, bean.getLibrarianName());
+            ps.setString(2, bean.getLibrarianEmail());
+            ps.setString(3, bean.getLibrarianPassword());
+            ps.setLong(4, bean.getLibrarianMobileNumber());
+            ps.setInt(5, bean.getLibrarianID());
+            status = ps.executeUpdate();
+            con.close();
+        }catch(ClassNotFoundException | SQLException e){
+            System.out.println("UPDATE LIBRARIAN ERROR! " + e);
+        }
+        return status;
     }
     
 }
