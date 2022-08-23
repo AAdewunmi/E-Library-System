@@ -145,4 +145,27 @@ public class BookDao {
         }
     }
     
+    public static int returnBook(String callno, int studentid){
+        int status = 0;
+        try{
+            Connection con = DB.getCon();
+            PreparedStatement ps = con.prepareStatement("update e_issuebook set returnstatus='yes' where callno=? and studentid=?");
+            ps.setString(1, callno);
+            ps.setInt(2, studentid);
+            
+            status = ps.executeUpdate();
+            
+            if(status > 0){
+                PreparedStatement ps2 = con.prepareStatement("update e_book set issued=? where callno=?");
+                ps2.setInt(1, getIssued(callno) -1);
+                ps2.setString(2, callno);
+                status = ps2.executeUpdate();
+            }
+            con.close();
+        }catch(ClassNotFoundException | SQLException e){
+            System.out.println("RETURN BOOK! " + e);
+        }
+        return status;
+    }
+    
 }
