@@ -33,10 +33,12 @@ This project aims to develop an electronic library application.
 The minimum viable product is an application that renders in web browsers 
 that can allow two types of users to perform different operations:
 
-1. Admin: Log in, register books, remove books and log out.
-2. Student: Log in, borrow books, return books and log out.
+1. Admin User: Log in, register Librarian, update Librarian, remove Librarian and log out.
+2. Librarian User: Log in, register books, update books, remove books and log out.
 
 ## What are the sprinkles (Nice to haves)?
+
+1. Student User: Log in, borrow books, return books and log out.
 
 ## When will the project be complete?
 
