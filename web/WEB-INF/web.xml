@@ -60,6 +60,10 @@
         <servlet-name>ReturnBook</servlet-name>
         <servlet-class>servlets.ReturnBook</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReturnBookForm</servlet-name>
+        <servlet-class>servlets.ReturnBookForm</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -119,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>ReturnBook</servlet-name>
         <url-pattern>/ReturnBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReturnBookForm</servlet-name>
+        <url-pattern>/ReturnBookForm</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
