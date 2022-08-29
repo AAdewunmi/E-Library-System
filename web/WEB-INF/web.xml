@@ -64,6 +64,10 @@
         <servlet-name>ReturnBookForm</servlet-name>
         <servlet-class>servlets.ReturnBookForm</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LibrarianLogin</servlet-name>
+        <servlet-class>servlets.LibrarianLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -127,6 +131,10 @@
     <servlet-mapping>
         <servlet-name>ReturnBookForm</servlet-name>
         <url-pattern>/ReturnBookForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LibrarianLogin</servlet-name>
+        <url-pattern>/LibrarianLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
