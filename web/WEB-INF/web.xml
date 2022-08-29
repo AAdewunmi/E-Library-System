@@ -72,6 +72,10 @@
         <servlet-name>ViewBook</servlet-name>
         <servlet-class>servlets.ViewBook</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewIssuedBook</servlet-name>
+        <servlet-class>servlets.ViewIssuedBook</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -143,6 +147,10 @@
     <servlet-mapping>
         <servlet-name>ViewBook</servlet-name>
         <url-pattern>/ViewBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewIssuedBook</servlet-name>
+        <url-pattern>/ViewIssuedBook</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
