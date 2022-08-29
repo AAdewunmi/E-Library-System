@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.WebServlet;
-import beans.IssueBookBean;
 import dao.BookDao;
 /**
  *
