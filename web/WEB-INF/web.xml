@@ -76,6 +76,10 @@
         <servlet-name>ViewIssuedBook</servlet-name>
         <servlet-class>servlets.ViewIssuedBook</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogoutLibrarian</servlet-name>
+        <servlet-class>servlets.LogoutLibrarian</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -151,6 +155,10 @@
     <servlet-mapping>
         <servlet-name>ViewIssuedBook</servlet-name>
         <url-pattern>/ViewIssuedBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutLibrarian</servlet-name>
+        <url-pattern>/LogoutLibrarian</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
