@@ -84,6 +84,10 @@
         <servlet-name>EditLibrarian</servlet-name>
         <servlet-class>servlets.EditLibrarian</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditLibrarianForm</servlet-name>
+        <servlet-class>servlets.EditLibrarianForm</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -167,6 +171,10 @@
     <servlet-mapping>
         <servlet-name>EditLibrarian</servlet-name>
         <url-pattern>/EditLibrarian</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditLibrarianForm</servlet-name>
+        <url-pattern>/EditLibrarianForm</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
