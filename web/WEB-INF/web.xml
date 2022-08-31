@@ -80,6 +80,10 @@
         <servlet-name>LogoutLibrarian</servlet-name>
         <servlet-class>servlets.LogoutLibrarian</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditLibrarian</servlet-name>
+        <servlet-class>servlets.EditLibrarian</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
@@ -159,6 +163,10 @@
     <servlet-mapping>
         <servlet-name>LogoutLibrarian</servlet-name>
         <url-pattern>/LogoutLibrarian</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditLibrarian</servlet-name>
+        <url-pattern>/EditLibrarian</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
