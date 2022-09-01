@@ -14,6 +14,10 @@ import jakarta.servlet.annotation.WebServlet;
  *
  * @author adrianadewunmi
  */
+import beans.LibrarianBean;
+import dao.LibrarianDao;
+
+
 @WebServlet("/servlets.EditLibrarian")
 public class EditLibrarian extends HttpServlet {
 
@@ -27,9 +31,17 @@ public class EditLibrarian extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
+        String sid = request.getParameter("id");
+        int id = Integer.parseInt(sid);
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String smobile = request.getParameter("mobile");
+        long mobile = Long.parseLong(smobile);
+        LibrarianBean bean = new LibrarianBean(id, name, email, password, mobile);
+        LibrarianDao.update(bean);
+	response.sendRedirect("servlets.ViewLibrarian");
     }
     
 }
