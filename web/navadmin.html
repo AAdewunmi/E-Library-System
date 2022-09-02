@@ -11,7 +11,30 @@
     <title>Nav Admin</title>
   </head>
   <body>
-    
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+       <div class="container-fluid">
+         <a class="navbar-brand" href="index.html">eLibrary</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+           <ul class="navbar-nav">
+             <li class="nav-item">
+               <a class="nav-link" href="index.html">Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="servlets.AddLibrarianForm">Add Librarian</a>
+             </li> 
+             <li class="nav-item">
+               <a class="nav-link" href="servlets.ViewLibrarian">View Librarian</a>
+             </li> 
+             <li class="nav-item">
+               <a class="nav-link" href="servlets.LogoutLibrarian">Logout</a>
+             </li> 
+           </ul>
+         </div>
+       </div>
+     </nav>
     <!-- Separate Popper and Bootstrap JS -->
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
