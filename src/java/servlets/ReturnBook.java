@@ -46,9 +46,11 @@ public class ReturnBook extends HttpServlet {
         out.println("<div class='container'>");
         String callno=request.getParameter("callno");
         String sstudentid=request.getParameter("studentid");
-        int studentid=Integer.parseInt(sstudentid);
-
+        
+        int studentid;
+        studentid = Integer.parseInt(sstudentid);
         int i=BookDao.returnBook(callno,studentid);
+        
         if(i>0){
                 out.println("<h3>Book returned successfully</h3>");
         }else{
