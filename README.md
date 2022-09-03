@@ -92,7 +92,7 @@ Implement the following:
 2. Student User:  Log in, search for book(s), view books, borrow books, return books and log out.
 
 
-## 5. Landing Page Screenshot
+## 5. Landing Page Screenshot:
 
 ![Image description](web/images/landingpage.png)
 
